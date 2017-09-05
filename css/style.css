@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* 開發時需要 用來看邊界dev only */
+    /* border: 1px solid black; */
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #29323b;
+}
+
+
+/* 主色(primary) #29323b */
+
+
+/* 強調色(accent) #E2C0B9 */
+
+
+/* 字體顏色 #333 */
+
+
+/* ====== general ====== */
+
+.cv {
+    width: 700px;
+    margin: 100px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .5);
+    position: relative;
+    z-index: 5;
+}
+
+html {
+    position: relative;
+}
+
+.decoration-box {
+    width: 100%;
+    height: 400px;
+    background: #a8a8a8;
+    /* 要注意定位對象 */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* 調整前後順序 越低越下面 position不為static才可使用 */
+    z-index: 1;
+}
+
+.cv-header,
+.cv-body,
+.cv-footer {
+    padding: 30px 50px;
+}
+
+.cv-footer {
+    padding: 80px 50px;
+}
+
+
+/* cv-header */
+
+.cv-header {
+    background: #ccc;
+}
+
+.name {
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+
+/* cv-body */
+
+.cv-body {
+    background: #fff;
+}
+
+.experience {
+    /*當作是一個可以被參考的對象*/
+    position: relative;
+    padding-top: 30px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.experience:last-child {
+    border-bottom: none;
+}
+
+.logo {
+    height: 44px;
+    right: 0;
+    top: 0;
+    /*預設為static 所以定位不會生效 要手動打開*/
+    position: absolute;
+}
+
+
+/* cv-footer */
+
+.cv-footer {
+    background: #29323b;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    color: white;
+    /*可以擺在同一行裡面*/
+    display: inline-block;
+    background: rgba(0, 0, 0, .5);
+    border: 1px dashed #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+.social-link>i {
+    /* i標籤為行內元素 */
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* 行高 */
+    line-height: 40px;
+    text-align: center;
+}
